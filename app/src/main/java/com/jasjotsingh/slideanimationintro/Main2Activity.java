@@ -13,13 +13,13 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        overridePendingTransition(R.anim.in_from_left,R.anim.out_to_left);
         Button button = findViewById(R.id.Button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent backIntent =  new Intent(Main2Activity.this,MainActivity.class);
                 startActivity(backIntent);
+                overridePendingTransition(R.anim.in_from_left,R.anim.out_to_right);
             }
         });
     }
